@@ -5,7 +5,9 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.dxctraining.inventorymgt.item.entities.Computer;
 import com.dxctraining.inventorymgt.item.entities.Item;
+import com.dxctraining.inventorymgt.item.entities.Phone;
 import com.dxctraining.inventorymgt.item.service.IItemService;
 import com.dxctraining.inventorymgt.supplier.entities.Supplier;
 import com.dxctraining.inventorymgt.supplier.exceptions.InvalidSupplierArgumentException;
@@ -37,7 +39,15 @@ public class InventoryUi {
 			Item item3 = new Item("laptop", supplier3);
 			itemService.addItem(item3);
 			
+			Phone item4 = new Phone("Apple", supplier1, 256);
+			itemService.addItem(item4);
+			Phone item5 = new Phone("Oneplus", supplier2, 128);
+			itemService.addItem(item5);
 			
+			Computer item6 = new Computer("Hp",supplier1,1024);
+			itemService.addItem(item6);
+			Computer item7 = new Computer("Dell",supplier2, 2048);
+			itemService.addItem(item7);
 			
 			System.out.println("*****Deleting a supplier*****");
 			int id3 = supplier3.getId();
