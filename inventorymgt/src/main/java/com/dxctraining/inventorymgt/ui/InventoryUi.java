@@ -37,6 +37,8 @@ public class InventoryUi {
 			Item item3 = new Item("laptop", supplier3);
 			itemService.addItem(item3);
 			
+			
+			
 			System.out.println("*****Deleting a supplier*****");
 			int id3 = supplier3.getId();
 			supplierService.removeSupplier(id3);
