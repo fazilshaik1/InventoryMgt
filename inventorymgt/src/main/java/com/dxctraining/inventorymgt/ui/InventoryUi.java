@@ -27,7 +27,7 @@ public class InventoryUi {
 			supplierService.addSupplier(supplier3);
 			
 			System.out.println("*****Deleting a supplier*****");
-			supplierService.removeSupplier(supplier3);
+			supplierService.removeSupplier(supplier3.getId());
 			
 			System.out.println("*****Fetching item by id*****");
 			int id1 = supplier1.getId();

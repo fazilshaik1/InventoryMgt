@@ -38,13 +38,6 @@ public class SupplierServiceImpl implements ISupplierService {
 	}
 
 	@Override
-	public void removeSupplier(Supplier supplier) {
-		validateSupplier(supplier);
-		dao.removeSupplier(supplier);
-		
-	}
-
-	@Override
 	public Supplier findById(int id) {
 		validateId(id);
 		Supplier supplier = dao.findById(id);
@@ -55,6 +48,12 @@ public class SupplierServiceImpl implements ISupplierService {
 		if(id == 0) {
 			throw new InvalidSupplierArgumentException("id should not be null");
 		}
+		
+	}
+	@Override
+	public void removeSupplier(int id) {
+		validateId(id);
+		dao.removeSupplier(id);
 		
 	}
 	

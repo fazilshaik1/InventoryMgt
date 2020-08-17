@@ -27,12 +27,6 @@ public class SupplierDaoImpl implements ISupplierDao {
 	}
 
 	@Override
-	public void removeSupplier(Supplier supplier) {
-		em.remove(supplier);
-		
-	}
-
-	@Override
 	public Supplier findById(int id) {
 		Supplier supplier = em.find(Supplier.class, id);
 		if(supplier == null) {
@@ -40,5 +34,13 @@ public class SupplierDaoImpl implements ISupplierDao {
 		}
 		return supplier;
 	}
+
+	@Override
+	public void removeSupplier(int id) {
+		Supplier supplier = findById(id);
+		em.remove(supplier);
+		
+	}
+
 
 }
