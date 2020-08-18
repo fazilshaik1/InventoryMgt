@@ -16,6 +16,7 @@ public class Supplier {
 	@GeneratedValue
 	private int id;
 	private String name;
+	
 	@OneToMany(mappedBy = "supplier")
 	private Set<Item> item;
 	

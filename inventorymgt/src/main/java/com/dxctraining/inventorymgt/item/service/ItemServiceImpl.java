@@ -33,7 +33,7 @@ public class ItemServiceImpl implements IItemService {
 	@Override
 	public Item addItem(Item item) {
 		validateItem(item);
-		dao.addItem(item);
+		item = dao.addItem(item);
 		return item;
 	}
 
@@ -47,7 +47,7 @@ public class ItemServiceImpl implements IItemService {
 	@Override
 	public Item updateItem(Item item) {
 		validateItem(item);
-		dao.updateItem(item);
+		item = dao.updateItem(item);
 		return item;
 	}
 

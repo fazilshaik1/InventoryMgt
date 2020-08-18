@@ -13,6 +13,15 @@ public class SupplierDaoImpl implements ISupplierDao {
 	
 	@PersistenceContext
 	private EntityManager em;
+	
+	@Override
+	public Supplier findById(int id) {
+		Supplier supplier = em.find(Supplier.class, id);
+		if(supplier == null) {
+			throw new SupplierNullException("Supplier is null");
+		}
+		return supplier;
+	}
 
 	@Override
 	public Supplier addSupplier(Supplier supplier) {
@@ -23,15 +32,6 @@ public class SupplierDaoImpl implements ISupplierDao {
 	@Override
 	public Supplier updateSupplier(Supplier supplier) {
 		em.merge(supplier);
-		return supplier;
-	}
-
-	@Override
-	public Supplier findById(int id) {
-		Supplier supplier = em.find(Supplier.class, id);
-		if(supplier == null) {
-			throw new SupplierNullException("Supplier is null");
-		}
 		return supplier;
 	}
 
