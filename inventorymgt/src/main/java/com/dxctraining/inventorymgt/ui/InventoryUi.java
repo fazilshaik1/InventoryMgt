@@ -74,8 +74,13 @@ public class InventoryUi {
 			System.out.println("******Fetching item by id******");
 			int itemid1 = item1.getId();
 			Item itemfetched = itemService.findById(itemid1);
-			System.out.println("fetched item id is "+itemfetched.getId()+" fetched item name is "+itemfetched.getName());
+			Supplier itemSupplier = itemfetched.getSupplier();
+			System.out.println("fetched item id is "+itemid1+" fetched item name is "+itemfetched.getName()+" item supplier is "+itemSupplier.getName());
 			
+			System.out.println("*****Displaying all items*****");
+			for(Item item:list) {
+				displayAllItems(item);
+			}
 			
 		}catch (InvalidSupplierArgumentException e) {
 			e.printStackTrace();
@@ -83,6 +88,28 @@ public class InventoryUi {
 			e.printStackTrace();
 		}
 		
+	}
+
+	public void displayAllItems(Item item) {
+		if(item instanceof Phone) {
+			phone(item);
+		}
+		if(item instanceof Computer) {
+			computer(item);
+		}
+		
+		System.out.println("item id :"+item.getId()+" item name :"+item.getName()+" item supplier :"+item.getSupplier().getName());
+	}
+
+	private void computer(Item item) {
+		Computer c = (Computer)item;
+		System.out.println(" model name :"+c.getName()+" disc size :"+c.getDiscsize());
+		
+	}
+
+	private void phone(Item item) {
+		Phone ph = (Phone)item;
+		System.out.println(" model name :"+ph.getName()+" storage :"+ph.getStoragesize());
 	}
 
 }
