@@ -34,16 +34,15 @@ public class SupplierController {
 	@GetMapping("/supplier")
 	public ModelAndView supplierDetails(@RequestParam("id")int id) {
 		Supplier supplier = service.findById(id);
-		ModelAndView modelAndView = new ModelAndView("details", "supplier", supplier);
+		ModelAndView modelAndView = new ModelAndView("supplierdetails", "supplier", supplier);
 		return modelAndView;	
 	}
 	
 	@GetMapping("/supplierlist")
 	public ModelAndView allSuppliers() {
 		List<Supplier>listAll = service.listAll();
-		ModelAndView modelAndView = new ModelAndView("list","suppliers",listAll);
+		ModelAndView modelAndView = new ModelAndView("supplierlist","suppliers",listAll);
 		return modelAndView;
-		
 	}
 
 }

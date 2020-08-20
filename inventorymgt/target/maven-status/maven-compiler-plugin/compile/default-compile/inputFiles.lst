@@ -8,7 +8,9 @@ C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\service\SupplierServiceImpl.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\entities\Computer.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\dao\ISupplierDao.java
+C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\dto\CreateComputerRequest.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\ui\InventoryUi.java
+C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\controller\ItemController.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\dao\IItemDao.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\ProjectApplication.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\service\ISupplierService.java
