@@ -58,7 +58,7 @@ public class ItemDaoImpl implements IItemDao{
 	@Override
 	public List<Phone> phonelist() {
 		String jpaql = "from Phone";
-		TypedQuery<Phone>query=em.createNamedQuery(jpaql, Phone.class);
+		TypedQuery<Phone>query=em.createQuery(jpaql, Phone.class);
 		List<Phone>list = query.getResultList();
 		return list;
 	}
