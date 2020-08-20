@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dxctraining.inventorymgt.item.dto.CreateComputerRequest;
+import com.dxctraining.inventorymgt.item.dto.CreatePhoneRequest;
 import com.dxctraining.inventorymgt.item.entities.Computer;
 import com.dxctraining.inventorymgt.item.entities.Item;
 import com.dxctraining.inventorymgt.item.entities.Phone;
@@ -78,5 +79,25 @@ public class ItemController {
 		return modelAndView;
 	}
 	
+	@GetMapping("/addphone")
+	public ModelAndView addPhone() {
+		ModelAndView modelAndView = new ModelAndView("addphone");
+		return modelAndView;
+	}
+	@GetMapping("/processaddphone")
+	public ModelAndView processAddPhone(@RequestParam("name")String name, @RequestParam("storagesize")int storagesize) {
+		Phone phone = new Phone(name, storagesize);
+		Item item = (Item)phone;
+		item = service1.addItem(item);
+		ModelAndView modelAndView = new ModelAndView("processaddphone","phone",item);
+		return modelAndView;
+	}
+	
+	@GetMapping("/postaddphone")
+	public ModelAndView postAddPhone() {
+		CreatePhoneRequest phone = new CreatePhoneRequest();
+		ModelAndView modelAndView = new ModelAndView("postaddphone","phone",phone);
+		return modelAndView;
+	}
 
 }
