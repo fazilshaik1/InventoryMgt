@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.dxctraining.inventorymgt.supplier.dto.CreateSupplierRequest;
 import com.dxctraining.inventorymgt.supplier.entities.Supplier;
 import com.dxctraining.inventorymgt.supplier.service.ISupplierService;
 
@@ -21,11 +22,11 @@ public class SupplierController {
 	
 	@PostConstruct
 	public void init() {
-		Supplier supplier1 = new Supplier("fazil");
+		Supplier supplier1 = new Supplier("fazil","1111");
 		int id1 = supplier1.getId();
 		supplier1 = service.addSupplier(supplier1);
 		
-		Supplier supplier2 = new Supplier("adil");
+		Supplier supplier2 = new Supplier("adil","2222");
 		int id2 = supplier2.getId();
 		supplier2 = service.addSupplier(supplier2);
 		
@@ -44,5 +45,27 @@ public class SupplierController {
 		ModelAndView modelAndView = new ModelAndView("supplierlist","suppliers",listAll);
 		return modelAndView;
 	}
+	
+	@GetMapping("/register")
+	public ModelAndView registerSupplier() {
+		ModelAndView modelAndView = new ModelAndView("register");
+		return modelAndView;	
+	}
+	
+	@GetMapping("/processregister")
+	public ModelAndView processRegister(@RequestParam("name")String name, @RequestParam("password")String password) {
+		Supplier supplier = new Supplier(name,password);
+		supplier = service.addSupplier(supplier);
+		ModelAndView modelAndView = new ModelAndView("details","supplier",supplier);
+		return modelAndView;
+	}
+	
+	@GetMapping("/postregister")
+	public ModelAndView postRegister() {
+		CreateSupplierRequest newSupplier = new CreateSupplierRequest();
+		ModelAndView modelAndView = new ModelAndView("postregister","supplier",newSupplier);
+		return modelAndView;
+	}
+	
 
 }
