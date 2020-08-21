@@ -1,6 +1,7 @@
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\dao\SupplierDaoImpl.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\service\IItemService.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\exceptions\InvalidItemArgumentException.java
+C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\dto\UpdateSupplierRequest.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\dao\ItemDaoImpl.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\entities\Phone.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\dto\CreatePhoneRequest.java
@@ -15,6 +16,7 @@ C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\service\SupplierServiceImpl.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\entities\Computer.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\dao\ISupplierDao.java
+C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\controller\SupplierRestController.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\item\dao\IItemDao.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\dto\SessionData.java
 C:\Users\sfazil3\Work space\dxc-maven\inventorymgt\src\main\java\com\dxctraining\inventorymgt\supplier\exceptions\SupplierNullException.java
