@@ -43,7 +43,7 @@ public class SupplierRestController {
 	public Supplier updateSupplier(@RequestBody UpdateSupplierRequest supplier) {
 		Supplier s1 = new Supplier(supplier.getName(),supplier.getPassword());
 		s1.setId(supplier.getId());
-		return service.addSupplier(s1);
+		return service.updateSupplier(s1);
 	}
 
 }

@@ -72,11 +72,4 @@ public class ItemServiceImpl implements IItemService {
 		return list;
 	}
 
-	@Override
-	public boolean authenticate(int id) {
-		Item item = dao.findById(id);
-		Phone phone = (Phone)item;
-		return phone!=null;
-	}
-
 }

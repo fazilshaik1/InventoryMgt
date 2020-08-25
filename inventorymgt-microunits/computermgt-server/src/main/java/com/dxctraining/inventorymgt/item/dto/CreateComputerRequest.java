@@ -3,7 +3,7 @@ package com.dxctraining.inventorymgt.item.dto;
 public class CreateComputerRequest {
 	
 	private String name;
-	private int disksize;
+	private int discsize;
 	private int supplierId;
 	
 	public String getName() {
@@ -12,11 +12,11 @@ public class CreateComputerRequest {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getDisksize() {
-		return disksize;
+	public int getDiscsize() {
+		return discsize;
 	}
-	public void setDisksize(int disksize) {
-		this.disksize = disksize;
+	public void setDiscsize(int disksize) {
+		this.discsize = disksize;
 	}
 
 	public int getSupplierId() {

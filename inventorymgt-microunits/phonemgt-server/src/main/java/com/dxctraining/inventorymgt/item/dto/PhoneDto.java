@@ -11,7 +11,8 @@ public class PhoneDto {
 
     }
     public PhoneDto(int id, String name, int storagesize){
-        super();
+        this.id = id;
+        this.name = name;
         this.storagesize = storagesize;
     }
 

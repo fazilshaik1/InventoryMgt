@@ -12,5 +12,4 @@ public interface IItemService {
 	void removeItem(int id);
 	List<Phone>phonelist();
 	List<Phone>phonesBySupplier(int supplierId);
-	boolean authenticate(int id);
 }

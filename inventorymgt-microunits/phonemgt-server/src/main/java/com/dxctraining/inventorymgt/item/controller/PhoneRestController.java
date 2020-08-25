@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(("/phone"))
-public class PhoneController {
+public class PhoneRestController {
 
 	@Autowired
 	private IItemService service;

@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/computer")
-public class ComputerController {
+public class ComputerRestController {
 	
 	@Autowired
 	private IItemService service;
@@ -31,7 +31,7 @@ public class ComputerController {
 	@PostMapping("/add")
 	@ResponseStatus(HttpStatus.CREATED)
 	public ComputerDto add(@RequestBody CreateComputerRequest requestData) {
-		Computer computer = new Computer(requestData.getName(), requestData.getSupplierId(),requestData.getDisksize());
+		Computer computer = new Computer(requestData.getName(), requestData.getSupplierId(),requestData.getDiscsize());
 		service.addItem(computer);
 		SupplierDto supplierDto = fetchFromSupplierById(requestData.getSupplierId());
 		ComputerDto response = computerUtil.computerDto(computer, supplierDto.getId(), supplierDto.getName());
@@ -50,7 +50,7 @@ public class ComputerController {
 
 	@GetMapping
 	public List<ComputerDto> fetchAll() {
-		List<Computer> list = service.computerlist()
+		List<Computer> list = service.computerlist();
 		List<ComputerDto> response = new ArrayList<>();
 		for (Computer computer : list) {
 			int supplierId = computer.getSupplierId();

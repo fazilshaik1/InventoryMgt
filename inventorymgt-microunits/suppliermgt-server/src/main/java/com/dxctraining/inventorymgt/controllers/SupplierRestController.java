@@ -35,7 +35,7 @@ public class SupplierRestController {
 
 	public SupplierDto toDto(Supplier supplier) {
 		SupplierDto dto = new SupplierDto();
-		dto.setItemId(supplier.getId());
+		dto.setId(supplier.getId());
 		dto.setName(supplier.getName());
 		dto.setPassword(supplier.getPassword());
 		return dto;
