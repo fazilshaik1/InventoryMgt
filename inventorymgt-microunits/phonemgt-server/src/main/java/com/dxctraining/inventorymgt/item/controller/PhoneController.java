@@ -9,14 +9,14 @@ import com.dxctraining.inventorymgt.item.service.IItemService;
 import com.dxctraining.inventorymgt.item.util.PhoneUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping(("/phone"))
 public class PhoneController {
 
 	@Autowired
@@ -62,7 +62,7 @@ public class PhoneController {
 	}
 
 	@GetMapping("/supplier/{supplierId}")
-	public List<PhoneDto> fetchAllSuppliers(@PathVariable("supplierId") int supplierId) {
+	public List<PhoneDto> fetchAllPhonesBySupplier(@PathVariable("supplierId") int supplierId) {
 		List<Phone> list = service.phonesBySupplier(supplierId);
 		List<PhoneDto> response = new ArrayList<>();
 		SupplierDto supplierDto = fetchFromSupplierById(supplierId);
@@ -71,12 +71,6 @@ public class PhoneController {
 			response.add(phoneDto);
 		}
 		return response;
-	}
-
-	@GetMapping("/authenticate/{id}")
-	public boolean authenticate(@PathVariable("id") int id) {
-		boolean result = service.authenticate(id);
-		return result;
 	}
 
 	public SupplierDto fetchFromSupplierById(int supplierId) {
