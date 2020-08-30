@@ -20,6 +20,10 @@ public class Supplier {
 	public Supplier() {
 		this("","");
 	}
+	public Supplier(int id,String name, String password) {
+		this(name,password);
+		this.id = id;
+	}
 
 	public int getId() {
 		return id;

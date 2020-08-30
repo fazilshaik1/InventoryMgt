@@ -51,28 +51,6 @@ public class SupplierController {
 		return modelAndView;
 	}
 	
-	@GetMapping("/register")
-	public ModelAndView registerSupplier() {
-		ModelAndView modelAndView = new ModelAndView("register");
-		return modelAndView;	
-	}
-	
-	@GetMapping("/processregister")
-	public ModelAndView processRegister(@RequestParam("name")String name, @RequestParam("password")String password) {
-		CreateSupplierRequest supplier = new CreateSupplierRequest(name,password);
-		String url = baseUrl + "/add";
-		SupplierDto supplierDto = restTemplate.postForObject(url,supplier, SupplierDto.class);
-		ModelAndView modelAndView = new ModelAndView("details","supplier",supplierDto);
-		return modelAndView;
-	}
-	
-	@GetMapping("/postregister")
-	public ModelAndView postRegister() {
-		CreateSupplierRequest newSupplier = new CreateSupplierRequest();
-		ModelAndView modelAndView = new ModelAndView("postregister","supplier",newSupplier);
-		return modelAndView;
-	}
-	
 	@GetMapping("/login")
 	public ModelAndView login() {
 		ModelAndView modelAndView = new ModelAndView("login");
